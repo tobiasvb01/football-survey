@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Fan Survey</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form action="index.html" method="get">
+        <header>
+          <h1>Football Fan Survey</h1>
+          <p>
+            Tell us about your interest in football and your favourite football
+            experiences.
+          </p>
+        </header>
+
+        <fieldset>
+          <legend>About You</legend>
+
+          <div class="form-group">
+            <label for="name">What is your name?</label>
+            <input
+              class="text-input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              minlength="2"
+              required
+              autofocus
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">What is your email address?</label>
+            <input
+              class="text-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="age">How old are you?</label>
+            <input
+              class="text-input"
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Enter your age"
+              min="1"
+              max="120"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Football Interest</legend>
+
+          <div class="form-group">
+            <label for="interest"
+              >How interested are you in football? (1-10)</label
+            >
+            <input
+              type="range"
+              id="interest"
+              name="interest"
+              min="1"
+              max="10"
+              value="5"
+            />
+          </div>
+
+          <div class="form-group">
+            <p class="question">What best describes you?</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="role" value="player" required />
+                Player</label
+              >
+              <label
+                ><input type="radio" name="role" value="coach" /> Coach</label
+              >
+              <label
+                ><input type="radio" name="role" value="referee" />
+                Referee</label
+              >
+              <label><input type="radio" name="role" value="fan" /> Fan</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <p class="question">What football do you follow?</p>
+            <div class="options">
+              <label
+                ><input
+                  type="checkbox"
+                  name="follows"
+                  value="league-football"
+                />
+                League football</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="follows"
+                  value="champions-league"
+                />
+                Champions League</label
+              >
+              <label
+                ><input type="checkbox" name="follows" value="national-teams" />
+                National teams</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="follows"
+                  value="womens-football"
+                />
+                Women's football</label
+              >
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Preferences</legend>
+
+          <div class="form-group">
+            <label for="league">Which league do you follow the most?</label>
+            <select id="league" name="league" required>
+              <option value="">Choose a league</option>
+              <option value="premier-league">Premier League</option>
+              <option value="la-liga">La Liga</option>
+              <option value="bundesliga">Bundesliga</option>
+              <option value="serie-a">Serie A</option>
+              <option value="ligue-1">Ligue 1</option>
+              <option value="superliga">Danish Superliga</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="club">What is your favourite football club?</label>
+            <input
+              class="text-input"
+              type="text"
+              id="club"
+              name="club"
+              placeholder="Enter a football club"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="kick-off">What is your preferred kick-off time?</label>
+            <input type="time" id="kick-off" name="kick-off" required />
+          </div>
+
+          <div class="form-group">
+            <label for="last-match"
+              >When did you last watch or attend a football match?</label
+            >
+            <input type="date" id="last-match" name="last-match" required />
+          </div>
+
+          <div class="form-group">
+            <label for="shirt-colour"
+              >What is your favourite colour for a football shirt?</label
+            >
+            <input
+              type="color"
+              id="shirt-colour"
+              name="shirt-colour"
+              value="#d5bdaf"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Football Memories</legend>
+
+          <div class="form-group">
+            <label for="football-photo"
+              >Upload your favourite football photo</label
+            >
+            <input type="file" id="football-photo" name="football-photo" />
+          </div>
+
+          <div class="form-group">
+            <label for="memory">What is your best football memory?</label>
+            <textarea
+              id="memory"
+              name="memory"
+              rows="5"
+              placeholder="Describe your favourite football memory"
+              required
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <div class="buttons">
+          <button type="submit">Submit Survey</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
